@@ -37,8 +37,6 @@ matplotlib-inline==0.1.7
 mdurl==0.1.2
 mutagen==1.47.0
 mylib==0.0.1
-# Editable install with no version control (MyLibrary==1.0)
--e c:\users\ksara\onedrive\desktop\pythonclasseve\my_library
 natsort==8.4.0
 numpy==2.2.2
 packaging==24.2

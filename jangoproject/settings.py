@@ -92,19 +92,11 @@ MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
 
 # Database settings
-if os.environ.get("RENDER"):   # When running on Render
-    DATABASES = {
-         "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL")
+DATABASES = {
+    'default': dj_database_url.config(
+        default="postgresql://mydb_pwal_user:AJw851ErKZx0SAnrPVlS8Z8ESJ3jwcKB@localhost:5432/mydb_pwal"
     )
-    }
-else:  # Local development
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
 
 # Password validation

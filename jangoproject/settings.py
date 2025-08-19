@@ -94,7 +94,9 @@ MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 # Database settings
 if os.environ.get("RENDER"):   # When running on Render
     DATABASES = {
-        'default': dj_database_url.config(default='postgresql://localhost:5432/mydb')
+         "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+    )
     }
 else:  # Local development
     DATABASES = {

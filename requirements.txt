@@ -29,7 +29,6 @@ ipython==8.32.0
 jedi==0.19.2
 kiwisolver==1.4.8
 library==3.0.59
-LibraryFile @ file:///C:/Users/ksara/OneDrive/Desktop/PythonClassEve/MyLibraryOne
 lxml==5.3.1
 Markdown==3.7
 markdown-it-py==3.0.0

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Navbar & Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- 🌟 Navbar -->
+    <nav class="bg-blue-600 text-white">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-2xl font-bold">Brand</a>
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                ☰
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-700">
+            <ul class="p-4 space-y-2">
+                <li><a href="#" class="block hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="block hover:text-gray-300">About</a></li>
+                <li><a href="#" class="block hover:text-gray-300">Services</a></li>
+                <li><a href="#" class="block hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block products %}{% endblock products %}
+    {% comment %} {% block  %}{% endblock  %} {% endcomment %}
+
+    <!-- 🌟 Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-400">Terms of Service</a>
+                <a href="#" class="hover:text-gray-400">Contact</a>
+            </div>
+            <div class="mt-4">
+                <p>© 2024 Brand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    {% comment %} <div class="flex flex-col items-end justify-end w-1/2 bg-purple-500 h-[300px] rounded-2xl    ">
+        <h1>hello</h1>
+
+    </div> {% endcomment %}
+
+    <!-- 🌟 JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>

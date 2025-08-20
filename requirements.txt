@@ -84,3 +84,4 @@ websocket-client==1.8.0
 websockets==15.0
 whitenoise==6.9.0
 yt-dlp==2025.2.19
+python-dotenv
